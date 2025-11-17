@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EKOPLATR Login & Rotating Card</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage">
+  <div class="login-ring">
+    <div class="ring-border ring1"></div>
+    <div class="ring-border ring2"></div>
+    <div class="ring-border ring3"></div>
+    <form id="loginForm" autocomplete="off">
+      <div class="nickname-grey">ENTER PASSWORD</div>
+      <input type="password" id="passwordInput" placeholder="Password" required />
+      <input type="submit" value="LOGIN" />
+      <div class="error-msg" id="errorMsg"></div>
+    </form>
+  </div>
+</div>
+
+<!-- MAIN PAGE -->
+<div id="mainPage" aria-hidden="true">
+  <header>EKOPLATR</header>
+  
+  <div id="card-middle-container">
+    <!-- Hanya shape card tanpa awan dan gantungan -->
+    <div id="card-container" role="main" aria-label="Rotating photo card">
+      <div class="bubbles"></div>
+      <div class="card" id="photoCard" tabindex="0" aria-live="polite" aria-atomic="true" aria-describedby="card-desc">
+        <div class="card-face front"></div>
+        <div class="card-face back"></div>
+      </div>
+      <div id="card-desc" class="sr-only">Photo card can be dragged and rotated with bubbles effect</div>
+    </div>
+  </div>
+
+  <footer>
+    DESAIGNED by Hanif
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
